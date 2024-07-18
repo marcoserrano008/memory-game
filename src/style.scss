@@ -1,7 +1,4 @@
-@use "./app/components/main-header/main-header.css";
-@use "./app/components/button/button.css";
-@use "./app/components/navigation-header/navigation-header.css";
-@use "./app/components/sidebar/sidebar.css";
+@use "./app/components/componentStyles.scss";
 @use "./assets/styles/colors.scss" as *;
 @use "./assets/styles/main.scss" as *;
 .container{
