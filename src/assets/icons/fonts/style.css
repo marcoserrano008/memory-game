@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'bvg-icon';
+  src:  url('./bvg-icon.eot?cjw0wd');
+  src:  url('./bvg-icon.eot?cjw0wd#iefix') format('embedded-opentype'),
+    url('./bvg-icon.ttf?cjw0wd') format('truetype'),
+    url('./bvg-icon.woff?cjw0wd') format('woff'),
+    url('./bvg-icon.svg?cjw0wd#bvg-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.bvg-symbols-outlined {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bvg-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.linux-face:before {
+  content: "\e908";
+}
+.sort-numeric-down:before {
+  content: "\e909";
+}
+.linux:before {
+  content: "\e900";
+}
+.apple:before {
+  content: "\e901";
+}
+.down_sort_numeric:before {
+  content: "\e902";
+}
+.github:before {
+  content: "\e903";
+}
+.hamburger_menu:before {
+  content: "\e904";
+}
+.heart:before {
+  content: "\e905";
+}
+.heart_broken:before {
+  content: "\e906";
+}
+.reddit:before {
+  content: "\e907";
+}
