@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link href="./style.css" rel="stylesheet" />
-    <script defer src="index.js"></script>
+    <script type="module" src="main.js"></script>
     <script defer src="./app/components/sidebar/sidebar.js"></script>
-    <script
-      defer
-      src="./app/components/cards-wrapper/cards-wrapper.js"
-    ></script>
     <title>Memory game</title>
   </head>
   <body>
@@ -19,8 +15,8 @@
           <div class="main-header__left">
             <section>
               <button
+                id="sidebarMenuButton"
                 class="toggle-sidebar bvg-btn bvg-btn--large bvg-btn--square bvg-btn--compound"
-                onclick="toggleSidebar()"
                 title="Menu"
               >
                 <span class="material-symbols-outlined menu-icon">menu</span>
@@ -132,110 +128,15 @@
                   >
                     timer
                   </span>
-                  <label class="game__header__timer__label" for="">
-                    06:54
+                  <label id="time" class="game__header__timer__label" for="">
+                    00:00
                   </label>
                 </section>
               </header>
               <section class="game__cards">
                 <div class="game__cards__content">
-                  <div class="cards-wrapper">
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card__content">
-                        <div class="card__content__front"></div>
-                        <div class="card__content__back">
-                          <img
-                            alt=""
-                            class="card__image"
-                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                  <div id="cardsGrid" class="cards-wrapper">
+<!--                  cards will be inserted here-->
                   </div>
                 </div>
               </section>
@@ -276,5 +177,6 @@
         </div>
       </div>
     </div>
+    <canvas class="confetti" id="confetti"></canvas>
   </body>
 </html>

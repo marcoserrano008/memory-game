@@ -8,6 +8,8 @@
   --sidebar-item-color: #41474D;
   --line-color: #909194;
   --line-top-color: #FCFCFF;
+  --like-button-color: #FFB4A9;
+  --cards-background-color: #595F66;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +23,8 @@
     --sidebar-item-color: #B8C8DA;
     --line-color: #41474D;
     --line-top-color: #161C22;
+    --like-button-color: #FFB4A9;
+    --cards-background-color: #595F66;
   }
 }
 
