@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const items = document.querySelectorAll(".sidebar__item");
+    const items = document.querySelectorAll(".bvg-sidebar__item");
 
     items.forEach(item => {
         item.addEventListener("click", function() {

@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet"  href="./sidebar.css" />
-  <script src="./sidebar.js"></script>
-  <title>Sidebar</title>
-</head>
-<body>
-<aside class="sidebar sidebar--active">
-  <section class="sidebar--title">
-    <span>
-      Menu
-    </span>
-  </section>
-  <nav class="sidebar__nav">
-    <a href="#" class="sidebar__item" title="Frutas" onclick="updateTitle('Frutas')">
-      <span class="bvg-symbols-outlined apple"></span>
-      <span>Frutas</span>
-    </a>
-    <a href="#" class="sidebar__item" title="Animales" onclick="updateTitle('Animales')">
-      <span class="bvg-symbols-outlined linux-face"></span>
-      <span>Animales</span>
-    </a>
-    <a href="#" class="sidebar__item" title="Numeros" onclick="updateTitle('Números')">
-      <span class="bvg-symbols-outlined sort-numeric-down"></span>
-      <span>Números</span>
-    </a>
-    <a href="#" class="sidebar__item" title="Tecnologia" onclick="updateTitle('Tecnología')">
-      <span class="bvg-symbols-outlined reddit"></span>
-      <span>Tecnología</span>
-    </a>
-  </nav>
-</aside>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sidebar.css" />
+    <script defer src="./sidebar.js"></script>
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <aside class="bvg-sidebar sidebar--active">
+      <section class="bvg-sidebar--title">
+        <span> Menu </span>
+      </section>
+      <nav class="bvg-sidebar__nav">
+        <a
+          href="#"
+          class="bvg-sidebar__item"
+          title="Frutas"
+          onclick="updateTitle('Frutas')"
+        >
+          <span class="bvg-symbols-outlined apple"></span>
+          <span>Frutas</span>
+        </a>
+        <a
+          href="#"
+          class="bvg-sidebar__item"
+          title="Animales"
+          onclick="updateTitle('Animales')"
+        >
+          <span class="bvg-symbols-outlined linux-face"></span>
+          <span>Animales</span>
+        </a>
+        <a
+          href="#"
+          class="bvg-sidebar__item"
+          title="Numeros"
+          onclick="updateTitle('Números')"
+        >
+          <span class="bvg-symbols-outlined sort-numeric-down"></span>
+          <span>Números</span>
+        </a>
+        <a
+          href="#"
+          class="bvg-sidebar__item"
+          title="Tecnologia"
+          onclick="updateTitle('Tecnología')"
+        >
+          <span class="bvg-symbols-outlined reddit"></span>
+          <span>Tecnología</span>
+        </a>
+      </nav>
+    </aside>
+  </body>
 </html>

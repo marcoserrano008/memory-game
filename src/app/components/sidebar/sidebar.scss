@@ -1,20 +1,21 @@
 @use "../../../assets/styles/colors.scss" as *;
 @use "../../../assets/styles/main.scss" as *;
-.sidebar {
+
+.bvg-sidebar {
   height: 100%;
-  width: 224px;
-  display: none;
- &--title{
-   width: auto;
-   height: 36px;
-   padding: 10px 16px 10px 16px;
-   font-size: 12px;
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   align-items: center;
-   color: var(--sidelbar-title-color);
- }
+  width: 100%;
+
+  &--title {
+    width: auto;
+    height: 36px;
+    padding: 10px 16px 10px 16px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--sidelbar-title-color);
+  }
   &--active {
     display: block;
   }
@@ -44,7 +45,7 @@
 
   &__item:hover {
     color: $light-on-primary;
-    background-color:  $light-primary;
+    background-color: $light-primary;
     border-radius: 0 30px 30px 0;
   }
 
@@ -54,7 +55,7 @@
 
   &__item[aria-selected="true"] {
     color: $light-on-primary;
-    background-color:  $light-primary;
+    background-color: $light-primary;
     border-radius: 0 30px 30px 0;
   }
 
@@ -66,6 +67,5 @@
     width: 2px;
     height: 100%;
     left: 0;
-
   }
 }
