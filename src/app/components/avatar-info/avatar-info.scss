@@ -1,0 +1,15 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/main.scss" as *;
+@use "../avatar/avatar.scss";
+
+.avatar-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-info__title{
+  color:$tertiary-100 ;
+  font-size: 12px;
+}

@@ -1,0 +1,30 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/main.scss" as *;
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:active {
+    color: $primary-40;
+  }
+
+  &__logo {
+    height: 32px;
+  }
+
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--link-title-color);
+    &--current{
+      color: var(--link--current-color);
+    }
+  }
+}
+.backslash{
+  color: var(--link-title-color);
+}

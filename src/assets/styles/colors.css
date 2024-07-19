@@ -1,0 +1,31 @@
+:root {
+  --main-header-color: #00639A;
+  --navigation-header-color: #E7F2FF;
+  --link-title-color: #41474D;
+  --link--current-color: #00639A;
+  --sidelbar-title-color: #41474D;
+  --container-sidebar-color: #FCFCFF;
+  --sidebar-item-color: #41474D;
+  --line-color: #909194;
+  --line-top-color: #FCFCFF;
+  --like-button-color: #FFB4A9;
+  --cards-background-color: #595F66;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-header-color: #2B3137;
+    --navigation-header-color: #45474A;
+    --link-title-color: #FFFFFF;
+    --link--current-color: #91CCFF;
+    --sidelbar-title-color: #B8C8DA;
+    --container-sidebar-color: #2B3137;
+    --sidebar-item-color: #B8C8DA;
+    --line-color: #41474D;
+    --line-top-color: #161C22;
+    --like-button-color: #FFB4A9;
+    --cards-background-color: #595F66;
+  }
+}
+
+/*# sourceMappingURL=colors.css.map */

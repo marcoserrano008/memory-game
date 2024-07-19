@@ -1,24 +1,25 @@
 import {drawConfetti} from "./app/utils/confetti.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    sidebarEventListener();
     renderCards();
 });
 
 const imgStack = [
     {
-        src: "https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "./assets/images/image1.png",
         id: 1,
     },
     {
-        src: "https://images.unsplash.com/photo-1721333089368-7ad209fb900a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "./assets/images/image2.png",
         id: 2,
     },
     {
-        src: "https://images.unsplash.com/photo-1719937206930-84afb0daf141?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "./assets/images/image3.png",
         id: 3,
     },
     {
-        src: "https://images.unsplash.com/photo-1721265576553-e7f8242fc915?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "./assets/images/image4.png",
         id: 4,
     },
 ];
@@ -65,7 +66,6 @@ function renderCards() {
 }
 
 function handleCard(event) {
-    console.log(event)
     initTimer();
 
     const card = event.target.parentNode;
@@ -85,13 +85,6 @@ function handleCard(event) {
         return;
     }
     lastClickedCard = card;
-}
-
-function initTimer() {
-    if (!isTimerStarted) {
-        intervalId = setInterval(updateTime, 1000);
-        isTimerStarted = true;
-    }
 }
 
 function cardMatch() {
@@ -132,6 +125,13 @@ function cardDoesNotMatch(card) {
     isProcessing = false;
 }
 
+function initTimer() {
+    if (!isTimerStarted) {
+        intervalId = setInterval(updateTime, 1000);
+        isTimerStarted = true;
+    }
+}
+
 function updateTime() {
     seconds++;
     const mins = Math.floor((seconds % 3600) / 60);
@@ -142,6 +142,7 @@ function updateTime() {
         "0"
     )}:${String(secs).padStart(2, "0")}`;
 
+    //time in 1/100 secs
     // const secs = Math.floor((seconds % 6000) / 100);
     //   const centSecs = seconds % 100;
 
@@ -165,4 +166,17 @@ function shuffle(array) {
         ];
     }
     return array;
+}
+
+function sidebarEventListener() {
+    const sidebarMenuButton = document.getElementById("sidebarMenuButton");
+    sidebarMenuButton.addEventListener('click', () => {
+        console.log('click')
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+
+        const container = document.getElementById("container");
+        container.classList.toggle("sidebar-visible");
+        container.classList.toggle("sidebar-hidden");
+    })
 }
