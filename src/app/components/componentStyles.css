@@ -5,31 +5,6 @@
 @import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 :root {
-  --main-header-color: #00639A;
-  --navigation-header-color: #E7F2FF;
-  --link-title-color: #41474D;
-  --link--current-color: #00639A;
-  --sidelbar-title-color: #41474D;
-  --container-sidebar-color: #FCFCFF;
-  --sidebar-item-color: #41474D;
-  --line-color: #909194;
-  --line-top-color: #FCFCFF;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-header-color: #2B3137;
-    --navigation-header-color: #45474A;
-    --link-title-color: #FFFFFF;
-    --link--current-color: #91CCFF;
-    --sidelbar-title-color: #B8C8DA;
-    --container-sidebar-color: #2B3137;
-    --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
-    --line-top-color: #161C22;
-  }
-}
-:root {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
@@ -512,74 +487,4 @@ body {
   left: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.container-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.container-menu {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  flex: 1;
-}
-
-.container-sidebar {
-  display: flex;
-  flex-direction: column;
-  border-right: var(--line-color) solid 1px;
-  z-index: 1000;
-  background-color: var(--container-sidebar-color);
-}
-
-.container-menu__footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  height: 100%;
-  padding: 20px;
-  align-items: flex-end;
-}
-
-.main-header__menu {
-  display: none;
-}
-
-.sidebar--active {
-  transform: translateX(0);
-  display: block !important;
-}
-.sidebar--inactive {
-  transform: translateX(-100%);
-}
-
-@media (max-width: 768px) {
-  .container-sidebar {
-    display: none;
-    border-top: var(--line-top-color) solid 1px;
-  }
-  .main-header__menu {
-    display: block;
-  }
-  .hamburger {
-    display: block;
-  }
-  .container-menu {
-    margin-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  .main-header__breadcrumb {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=componentStyles.css.map */

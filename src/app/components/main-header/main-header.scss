@@ -1,0 +1,46 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/main.scss" as *;
+@use "../avatar-info/avatar-info.scss";
+@use "../header-info/header-info.scss";
+@use "../button/button.css";
+
+.main-header {
+  box-sizing: border-box;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  justify-content: space-between;
+  background-color:  var(--main-header-color);
+  padding: 10px 16px 10px 16px;
+
+  & div {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items:center;
+  }
+
+  &__left {
+    overflow: hidden;
+  }
+
+  &__breadcrumb {
+    margin-inline: 6px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 6px;
+  }
+
+  &__breadcrumb > .custom.link:last-child {
+    display: inherit;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-header__breadcrumb > .custom.link,
+  .main-header__breadcrumb > span {
+    display: none;
+  }
+}
