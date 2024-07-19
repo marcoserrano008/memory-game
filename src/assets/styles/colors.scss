@@ -151,6 +151,8 @@
     --sidebar-item-color: #{$light-on-surface-variant};
     --line-color: #{$neutral-60};
     --line-top-color: #{$light-background};
+    --like-button-color: #{$error-80};
+    --cards-background-color: #{$neutral-variant-40};
   }
 
   @media (prefers-color-scheme: dark) {
@@ -164,6 +166,8 @@
       --sidebar-item-color: #{$dark-secondary};
       --line-color: #{$neutral-variant-30};
       --line-top-color: #{$neutral-variant-10};
+      --like-button-color: #{$error-80};
+      --cards-background-color: #{$neutral-variant-40};
     }
   }
 

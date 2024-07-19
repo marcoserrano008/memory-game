@@ -1,92 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="./style.css" rel="stylesheet" />
+    <script defer src="index.js"></script>
+    <script defer src="./app/components/sidebar/sidebar.js"></script>
+    <script
+      defer
+      src="./app/components/cards-wrapper/cards-wrapper.js"
+    ></script>
     <title>Memory game</title>
-</head>
-<body>
-<div class="container">
-    <div class="container-header">
+  </head>
+  <body>
+    <div class="container sidebar-hidden" id="container">
+      <header class="header">
         <nav class="main-header">
-            <div class="main-header__left">
-                <section>
-                    <button class="bvg-btn bvg-btn--large bvg-btn--compound main-header__menu" id="hamburger-btn"   >
-                        <span class="bvg-btn__icon bvg-symbols-outlined hamburger_menu"></span>
-                    </button>
+          <div class="main-header__left">
+            <section>
+              <button
+                class="toggle-sidebar bvg-btn bvg-btn--large bvg-btn--square bvg-btn--compound"
+                onclick="toggleSidebar()"
+                title="Menu"
+              >
+                <span class="material-symbols-outlined menu-icon">menu</span>
+              </button>
+            </section>
+            <section class="main-header__breadcrumb">
+              <section class="header-info">
+                <img
+                  alt="logo"
+                  class="header-info__logo"
+                  src="./assets/images/logo.png"
+                />
+                <section class="header-info--text">
+                  <span class="header-info__title"> Bootcamp 2024 </span>
+                  <span class="header-info__subtitle">
+                    Web Front End Technologies
+                  </span>
                 </section>
-                <section class="main-header__breadcrumb">
-                    <section class="header-info">
-                        <img class="header-info__logo" src="./assets/images/logo.png" alt="logo" />
-                        <section class="header-info--text">
-                            <span class="header-info__title">
-                                Bootcamp 2024
-                            </span>
-                            <span class="header-info__subtitle">
-                                Web Front End Technologies
-                            </span>
-                        </section>
-                    </section>
-                </section>
-            </div>
-            <div class="main-header__right">
-                <section>
-                    <section class="avatar-info">
-                        <span class="avatar-info__title">
-                            Team Bugvengers
-                        </span>
-                        <div class="avatar">
-                            <img class="image" src="./assets/images/avatar.png" alt="avatar" />
-                        </div>
-                    </section>
-                </section>
-            </div>
+              </section>
+            </section>
+          </div>
+          <div class="main-header__right">
+            <section>
+              <section class="avatar-info">
+                <span class="avatar-info__title"> Team Bugvengers </span>
+                <div class="avatar">
+                  <img
+                    alt="avatar"
+                    class="image"
+                    src="./assets/images/avatar.png"
+                  />
+                </div>
+              </section>
+            </section>
+          </div>
         </nav>
-    </div>
-    <div class="container-menu">
-        <div class="container-sidebar" id="sidebar">
-            <aside class="sidebar sidebar--active" >
-                <section class="sidebar--title">
-                    <span>
-                      Menu
-                    </span>
-                </section>
-                <nav class="sidebar__nav">
-                    <a href="#" class="sidebar__item" title="Frutas" onclick="updateTitle('Frutas')" aria-selected="true">
-                        <span class="bvg-symbols-outlined apple"></span>
-                        <span>Frutas</span>
-                    </a>
-                    <a href="#" class="sidebar__item" title="Animales" onclick="updateTitle('Animales')">
-                        <span class="bvg-symbols-outlined linux-face"></span>
-                        <span>Animales</span>
-                    </a>
-                    <a href="#" class="sidebar__item" title="Numeros" onclick="updateTitle('Números')">
-                        <span class="bvg-symbols-outlined sort-numeric-down"></span>
-                        <span>Números</span>
-                    </a>
-                    <a href="#" class="sidebar__item" title="Tecnologia" onclick="updateTitle('Tecnología')">
-                        <span class="bvg-symbols-outlined reddit"></span>
-                        <span>Tecnología</span>
-                    </a>
-                </nav>
-            </aside>
-            <div class="container-menu__footer">
-                <span class="bvg-symbols-outlined github"></span>
-            </div>
+      </header>
+      <div class="sidebar" id="sidebar">
+        <aside class="bvg-sidebar sidebar--active">
+          <section class="bvg-sidebar--title">
+            <span> Menu </span>
+          </section>
+          <nav class="bvg-sidebar__nav">
+            <a
+              class="bvg-sidebar__item"
+              href="#"
+              onclick="updateTitle('Frutas')"
+              title="Frutas"
+            >
+              <span class="bvg-symbols-outlined apple"></span>
+              <span>Frutas</span>
+            </a>
+            <a
+              class="bvg-sidebar__item"
+              href="#"
+              onclick="updateTitle('Animales')"
+              title="Animales"
+            >
+              <span class="bvg-symbols-outlined linux-face"></span>
+              <span>Animales</span>
+            </a>
+            <a
+              class="bvg-sidebar__item"
+              href="#"
+              onclick="updateTitle('Números')"
+              title="Numeros"
+            >
+              <span class="bvg-symbols-outlined sort-numeric-down"></span>
+              <span>Números</span>
+            </a>
+            <a
+              class="bvg-sidebar__item"
+              href="#"
+              onclick="updateTitle('Tecnología')"
+              title="Tecnologia"
+            >
+              <span class="bvg-symbols-outlined reddit"></span>
+              <span>Tecnología</span>
+            </a>
+          </nav>
+        </aside>
+        <div class="footer-icon">
+          <span class="bvg-symbols-outlined github"></span>
         </div>
+      </div>
+      <div class="main">
         <nav class="navigation-header">
-            <span  class="link" title="Equality Game">
-                <span class="link__title">Equality Game</span>
-            </span>
-            <span class="backslash">/</span>
-            <span class="link" id="current-title" >
-                <span class="link__title--current">Frutas</span>
-            </span>
+          <span class="link" title="Equality Game">
+            <span class="link__title">Equality Game</span>
+          </span>
+          <span class="backslash">/</span>
+          <span class="link" id="current-title">
+            <span class="link__title--current">Frutas</span>
+          </span>
         </nav>
+        <section class="title">
+          <label class="title__label">
+            Toca un par de fichas para revelar si son iguales
+          </label>
+        </section>
+
+        <div class="game-section">
+          <div class="game-container">
+            <div class="game">
+              <header class="game__header">
+                <section class="game__header__timer">
+                  <span
+                    class="game__header__timer__icon material-symbols-outlined"
+                  >
+                    timer
+                  </span>
+                  <label class="game__header__timer__label" for="">
+                    06:54
+                  </label>
+                </section>
+              </header>
+              <section class="game__cards">
+                <div class="game__cards__content">
+                  <div class="cards-wrapper">
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__content__front"></div>
+                        <div class="card__content__back">
+                          <img
+                            alt=""
+                            class="card__image"
+                            src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <footer class="game__footer">
+                <section class="game__footer__info">
+                  <label class="game__footer__info__title" for=""
+                    >Equality Game</label
+                  >
+                  <label class="game__footer__info__body" for="">
+                    @bugvengers
+                  </label>
+                </section>
+                <section class="game__footer__feedback">
+                  <button class="game__footer__feedback__like">
+                    <span
+                      class="game__footer__feedback__like__icon material-symbols-outlined"
+                    >
+                      favorite
+                    </span>
+                    <label class="game__footer__feedback__like__label" for=""
+                      >Me gusta</label
+                    >
+                  </button>
+                  <button class="game__footer__feedback__dislike">
+                    <span
+                      class="game__footer__feedback__dislike__icon material-symbols-outlined"
+                    >
+                      heart_broken
+                    </span>
+                    <label class="game__footer__feedback__dislike__label" for=""
+                      >No me gusta</label
+                    >
+                  </button>
+                </section>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<script src="index.js"></script>
-<script src="./app/components/sidebar/sidebar.js"></script>
-</body>
+  </body>
 </html>
