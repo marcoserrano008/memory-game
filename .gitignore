@@ -1,0 +1,39 @@
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Build output
+/dist
+/build
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+*.vscode
+*.code-workspace
+*.project
+*.settings/
+
+# NPM packages
+package-lock.json
+
+# Yarn packages
+yarn.lock

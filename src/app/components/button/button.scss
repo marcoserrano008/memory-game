@@ -1,0 +1,83 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/main.scss" as *;
+
+@mixin button-hover($background-color, $color: null, $border-color: null) {
+  &:hover {
+    background-color: $background-color;
+    @if $color {
+      color: $color;
+    }
+    @if $border-color {
+      border-color: $border-color;
+    }
+  }
+}
+
+@mixin button-active($background-color, $color: null, $border-color: null) {
+  &:active {
+    background-color: $background-color;
+    @if $color {
+      color: $color;
+    }
+    @if $border-color {
+      border-color: $border-color;
+    }
+  }
+}
+
+.bvg-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 120px;
+}
+
+.bvg-btn__icon,
+.bvg-btn__text {
+  vertical-align: middle;
+}
+
+.bvg-btn {
+  padding: 0 8px;
+  box-sizing: border-box;
+  width: fit-content;
+  border: 0;
+  border-radius: 4px;
+  transition-timing-function: cubic-bezier(0.33, 0, 0.67, 1);;
+  transition-duration: 100ms;
+  cursor: pointer;
+  user-select: none;
+
+  &--medium {
+    height: 32px;
+    min-width: 32px;
+  }
+
+  &--large {
+    height: 48px;
+    min-width: 48px;
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &[disabled] {
+    background-color: #f0f0f0 !important;
+    color: #bdbdbd !important;
+    cursor: default;
+  }
+
+  &:hover {
+    color:$primary-99;
+  }
+
+  &:active {
+    color: $primary-95;
+  }
+
+  &--compound {
+    background-color: transparent;
+    color: $light-surface;}
+}
+

@@ -1,0 +1,30 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/main.scss" as *;
+@use "../avatar/avatar.scss";
+
+.header-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color:$light-surface;
+
+  &__title{
+    font-size: 11px;
+    font-weight: 500;
+
+  }
+  &__subtitle{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &--text{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+  }
+  &__logo{
+    width: 42px;
+    height: 43px;
+  }
+}
