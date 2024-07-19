@@ -17,13 +17,14 @@
   }
 
   &__title {
-
     overflow: hidden;
     text-overflow: ellipsis;
-    color:$light-on-surface-variant;
+    color: var(--link-title-color);
     &--current{
-      color: $light-primary;
+      color: var(--link--current-color);
     }
   }
-
+}
+.backslash{
+  color: var(--link-title-color);
 }
