@@ -733,7 +733,6 @@ body {
   grid-area: header;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 .sidebar {
@@ -746,6 +745,8 @@ body {
 .main {
   grid-area: main;
   background-color: var(--line-top-color);
+  overflow-y: auto;
+  height: 100%;
 }
 
 .toggle-sidebar {
