@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(../src/assets/icons/fonts/style.css);
 :root {
@@ -835,12 +836,13 @@ body {
     display: block;
   }
   .sidebar.active {
+    box-sizing: border-box;
     display: block;
     position: fixed;
     left: 0;
     top: 70px;
     width: 250px;
-    height: calc(100% - 60px);
+    height: calc(100% - 70px);
     z-index: 1001;
     background-color: var(--container-sidebar-color);
     padding: 1rem;

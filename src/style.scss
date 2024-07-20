@@ -115,12 +115,13 @@
   }
 
   .sidebar.active {
+    box-sizing: border-box;
     display: block;
     position: fixed;
     left: 0;
     top: 70px;
     width: 250px;
-    height: calc(100% - 60px);
+    height: calc(100% - 70px);
     z-index: 1001;
     background-color: var(--container-sidebar-color);
     padding: 1rem;
