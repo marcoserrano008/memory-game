@@ -14,14 +14,14 @@ $card-shadow: 0px 9px 15px 0px rgba(22, 28, 34, 0.25);
 .cards-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(70px, 200px));
-  gap: 32px 48px;
+  grid-template-columns: repeat(2, minmax(40px, 200px));
+  gap: 16px 60px;
   max-width: 1100px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   margin: 0 auto;
-  min-width: 260px;
+  min-width: 230px;
 }
 
 .card {
@@ -94,8 +94,22 @@ $card-shadow: 0px 9px 15px 0px rgba(22, 28, 34, 0.25);
   .cards-wrapper {
     grid-template-columns: repeat(
       4,
-      minmax(80px, 1fr)
-    ); /* 4 columns for wider screens */
+      minmax(40px, 1fr)
+    );
     gap: 32px;
+    padding: 0 28px 0 36px;
+  }
+
+}
+
+@media (width < 450px) {
+  .cards-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(40px, 200px));
+    gap: 28px 72px;
+    margin: 0 auto;
+    padding: 0 28px 0 36px;
+    min-width: 230px;
   }
 }

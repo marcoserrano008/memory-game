@@ -1,6 +1,7 @@
 @use "./app/components/componentStyles.scss";
 @use "./assets/styles/colors.scss" as *;
 @use "./assets/styles/main.scss" as *;
+@import url(../src/assets/icons/fonts/style.css);
 
 .container {
   display: grid;
