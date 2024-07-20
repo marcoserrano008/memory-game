@@ -12,6 +12,8 @@ const colors = [
     "Gold", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"
 ];
 
+let animationFrameId;
+
 function getRandomNumber(from, to) {
     return Math.floor(Math.random() * (to - from + 1) + from);
 }
@@ -56,7 +58,14 @@ export function drawConfetti() {
         }
     });
 
-    requestAnimationFrame(drawConfetti);
+    animationFrameId = requestAnimationFrame(drawConfetti);
+}
+
+export function clearConfetti() {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+    }
+    context.clearRect(0, 0, W, H);
 }
 
 function resizeCanvas() {

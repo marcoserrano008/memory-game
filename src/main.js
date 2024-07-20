@@ -1,4 +1,4 @@
-import {drawConfetti} from "./app/utils/confetti.js";
+import {drawConfetti, clearConfetti} from "./app/utils/confetti.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     sidebarEventListener();
@@ -98,11 +98,29 @@ function cardMatch() {
 }
 
 function endGame() {
-    if (seconds < minCompletedTime || !minCompletedTime) {
+    const bestScoreLabel = document.querySelector(".best-score");
+    const newScoreLabel = document.querySelector(".new-score");
+    const storedMinTime = localStorage.getItem("min-time");
+    const minCompletedTime = storedMinTime !== null ? parseInt(storedMinTime, 10) : null;
+
+    if (minCompletedTime === null || seconds < minCompletedTime) {
         drawConfetti();
         localStorage.setItem("min-time", seconds);
+        bestScoreLabel.innerText = `${seconds} segundos`;
+    } else {
+        bestScoreLabel.innerText = `${minCompletedTime} segundos`;
     }
+
+    newScoreLabel.innerText = `${seconds} segundos`;
+
+    showModal();
     clearInterval(intervalId);
+}
+
+
+function showModal() {
+    const modalElement = document.getElementById("score-modal");
+    modalElement.style.display = "block";
 }
 
 function cardDoesNotMatch(card) {
@@ -141,15 +159,6 @@ function updateTime() {
         2,
         "0"
     )}:${String(secs).padStart(2, "0")}`;
-
-    //time in 1/100 secs
-    // const secs = Math.floor((seconds % 6000) / 100);
-    //   const centSecs = seconds % 100;
-
-    //   document.getElementById("time").textContent = `${String(secs).padStart(
-    //     2,
-    //     "0"
-    //   )}:${String(centSecs).padStart(2, "0")}`;
 }
 
 function shuffle(array) {
@@ -180,3 +189,30 @@ function sidebarEventListener() {
         container.classList.toggle("sidebar-hidden");
     })
 }
+
+function resetGame() {
+    clearInterval(intervalId);
+    clearConfetti();
+    lastClickedCard = null;
+    matches = 0;
+    seconds = 0;
+    isTimerStarted = false;
+    isProcessing = false;
+
+    shuffle(cards);
+    renderCards();
+
+    document.getElementById("time").textContent = "00:00";
+}
+
+const playAgainBtn = document.querySelector('.modal-content__btn');
+playAgainBtn.addEventListener('click', () => {
+    const modalElement = document.getElementById("score-modal");
+    modalElement.style.display = "none";
+    resetGame();
+})
+
+const resetScoreElement = document.querySelector('.github');
+resetScoreElement.addEventListener('click', () => {
+    localStorage.removeItem("min-time");
+})
