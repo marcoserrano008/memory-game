@@ -26,6 +26,7 @@
   overflow-y: auto;
   background-color: var(--container-sidebar-color);
   position: relative;
+  border-right: 1px solid var(--line-right-color);
 }
 
 .main {

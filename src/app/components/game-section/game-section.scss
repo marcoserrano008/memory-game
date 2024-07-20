@@ -25,12 +25,12 @@ $color-stroke-1: rgba(140, 145, 152, 0.5);
 }
 
 .game {
-  background-color: var(--line-color);
+  background-color: var(--container-game-color);
   width: 100%;
   border-radius: 8px;
   margin: auto;
   max-width: 1250px;
-  border: 1px solid $color-stroke-1;
+  box-shadow:  0 9px 15px 0 #45474A40;
   overflow: hidden;
   min-width: 350px;
 
@@ -68,7 +68,7 @@ $color-stroke-1: rgba(140, 145, 152, 0.5);
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: var(--main-header-color);
+    background-color: var(--container-game-footer);
 
     &__info {
       display: flex;
