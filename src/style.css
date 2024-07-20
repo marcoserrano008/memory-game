@@ -605,7 +605,7 @@ body {
     padding: 0 28px 0 36px;
   }
 }
-@media (width < 450px) {
+@media (max-width: 450px) {
   .cards-wrapper {
     width: 100%;
     display: grid;

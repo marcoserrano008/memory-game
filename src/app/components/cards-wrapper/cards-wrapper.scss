@@ -102,7 +102,7 @@ $card-shadow: 0px 9px 15px 0px rgba(22, 28, 34, 0.25);
 
 }
 
-@media (width < 450px) {
+@media (max-width: 450px) {
   .cards-wrapper {
     width: 100%;
     display: grid;
