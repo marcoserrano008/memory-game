@@ -543,7 +543,7 @@ body {
 .card {
   position: relative;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   perspective: 3000px;
   cursor: pointer;
 }
@@ -576,7 +576,7 @@ body {
   height: 100%;
   object-fit: cover;
   backface-visibility: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .card--flipped .card__content {
   transform: rotateY(180deg);
