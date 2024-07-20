@@ -1,4 +1,6 @@
+@import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 :root {
   --main-header-color: #00639A;
@@ -129,7 +131,7 @@ body {
   --line-top-color: #FCFCFF;
   --like-button-color: #BA1B1B;
   --cards-background-color: #51606F;
-  --container-game-color: #CBE5FF;
+  --container-game-color: #F0F3F6;
   --container-game-footer: #FCFCFF ;
 }
 

@@ -1,5 +1,6 @@
 @import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(../src/assets/icons/fonts/style.css);
@@ -746,7 +747,6 @@ body {
   grid-area: header;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 .sidebar {
@@ -760,6 +760,8 @@ body {
 .main {
   grid-area: main;
   background-color: var(--line-top-color);
+  overflow-y: auto;
+  height: 100%;
 }
 
 .toggle-sidebar {
