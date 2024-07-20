@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
-@import url(../src/assets/icons/fonts/style.css);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 :root {
   --main-header-color: #00639A;
@@ -10,10 +9,12 @@
   --sidelbar-title-color: #41474D;
   --container-sidebar-color: #FCFCFF;
   --sidebar-item-color: #41474D;
-  --line-color: #909194;
+  --line-right-color: #72777E;
   --line-top-color: #FCFCFF;
-  --like-button-color: #FFB4A9;
-  --cards-background-color: #595F66;
+  --like-button-color: #BA1B1B;
+  --cards-background-color: #51606F;
+  --container-game-color: #F0F3F6;
+  --container-game-footer: #FCFCFF ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,10 +26,12 @@
     --sidelbar-title-color: #B8C8DA;
     --container-sidebar-color: #2B3137;
     --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
+    --line-right-color: #41474D;
     --line-top-color: #161C22;
     --like-button-color: #FFB4A9;
     --cards-background-color: #595F66;
+    --container-game-color: #1A1C1E;
+    --container-game-footer: #2B3137 ;
   }
 }
 :root {
@@ -199,10 +202,12 @@ body {
   --sidelbar-title-color: #41474D;
   --container-sidebar-color: #FCFCFF;
   --sidebar-item-color: #41474D;
-  --line-color: #909194;
+  --line-right-color: #72777E;
   --line-top-color: #FCFCFF;
-  --like-button-color: #FFB4A9;
-  --cards-background-color: #595F66;
+  --like-button-color: #BA1B1B;
+  --cards-background-color: #51606F;
+  --container-game-color: #F0F3F6;
+  --container-game-footer: #FCFCFF ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -214,10 +219,12 @@ body {
     --sidelbar-title-color: #B8C8DA;
     --container-sidebar-color: #2B3137;
     --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
+    --line-right-color: #41474D;
     --line-top-color: #161C22;
     --like-button-color: #FFB4A9;
     --cards-background-color: #595F66;
+    --container-game-color: #1A1C1E;
+    --container-game-footer: #2B3137 ;
   }
 }
 :root {
@@ -359,8 +366,12 @@ body {
   --sidelbar-title-color: #41474D;
   --container-sidebar-color: #FCFCFF;
   --sidebar-item-color: #41474D;
-  --line-color: #909194;
+  --line-right-color: #72777E;
   --line-top-color: #FCFCFF;
+  --like-button-color: #BA1B1B;
+  --cards-background-color: #51606F;
+  --container-game-color: #CBE5FF;
+  --container-game-footer: #FCFCFF ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -372,8 +383,12 @@ body {
     --sidelbar-title-color: #B8C8DA;
     --container-sidebar-color: #2B3137;
     --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
+    --line-right-color: #41474D;
     --line-top-color: #161C22;
+    --like-button-color: #FFB4A9;
+    --cards-background-color: #595F66;
+    --container-game-color: #1A1C1E;
+    --container-game-footer: #2B3137 ;
   }
 }
 :root {
@@ -605,12 +620,12 @@ body {
 }
 
 .game {
-  background-color: var(--line-color);
+  background-color: var(--container-game-color);
   width: 100%;
   border-radius: 8px;
   margin: auto;
   max-width: 1250px;
-  border: 1px solid rgba(140, 145, 152, 0.5);
+  box-shadow: 0 9px 15px 0 rgba(69, 71, 74, 0.2509803922);
   overflow: hidden;
   min-width: 350px;
 }
@@ -644,7 +659,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: var(--main-header-color);
+  background-color: var(--container-game-footer);
 }
 .game__footer__info {
   display: flex;

@@ -8,10 +8,12 @@
   --sidelbar-title-color: #41474D;
   --container-sidebar-color: #FCFCFF;
   --sidebar-item-color: #41474D;
-  --line-color: #909194;
+  --line-right-color: #72777E;
   --line-top-color: #FCFCFF;
-  --like-button-color: #FFB4A9;
-  --cards-background-color: #595F66;
+  --like-button-color: #BA1B1B;
+  --cards-background-color: #51606F;
+  --container-game-color: #F0F3F6;
+  --container-game-footer: #FCFCFF ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,10 +25,12 @@
     --sidelbar-title-color: #B8C8DA;
     --container-sidebar-color: #2B3137;
     --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
+    --line-right-color: #41474D;
     --line-top-color: #161C22;
     --like-button-color: #FFB4A9;
     --cards-background-color: #595F66;
+    --container-game-color: #1A1C1E;
+    --container-game-footer: #2B3137 ;
   }
 }
 :root {
@@ -121,10 +125,12 @@ body {
   --sidelbar-title-color: #41474D;
   --container-sidebar-color: #FCFCFF;
   --sidebar-item-color: #41474D;
-  --line-color: #909194;
+  --line-right-color: #72777E;
   --line-top-color: #FCFCFF;
-  --like-button-color: #FFB4A9;
-  --cards-background-color: #595F66;
+  --like-button-color: #BA1B1B;
+  --cards-background-color: #51606F;
+  --container-game-color: #CBE5FF;
+  --container-game-footer: #FCFCFF ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -136,10 +142,12 @@ body {
     --sidelbar-title-color: #B8C8DA;
     --container-sidebar-color: #2B3137;
     --sidebar-item-color: #B8C8DA;
-    --line-color: #41474D;
+    --line-right-color: #41474D;
     --line-top-color: #161C22;
     --like-button-color: #FFB4A9;
     --cards-background-color: #595F66;
+    --container-game-color: #1A1C1E;
+    --container-game-footer: #2B3137 ;
   }
 }
 :root {

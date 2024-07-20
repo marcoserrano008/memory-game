@@ -180,3 +180,20 @@ function sidebarEventListener() {
         container.classList.toggle("sidebar-hidden");
     })
 }
+function updateTitle(newTitle) {
+    const currentTitleElement = document.getElementById("current-title");
+    currentTitleElement.innerText = newTitle;
+    document.querySelectorAll(".link__title--current").forEach((element) => {
+        element.classList.remove("link__title--current");
+    });
+    currentTitleElement.classList.add("link__title--current");
+}
+
+document.querySelectorAll('.bvg-sidebar__item').forEach(item => {
+
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        const newTitle = item.getAttribute('title');
+        updateTitle(newTitle);
+    });
+});
