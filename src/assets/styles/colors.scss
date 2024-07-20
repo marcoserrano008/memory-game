@@ -85,8 +85,10 @@
 
   $light-primary: #00639A;
   $light-on-primary: #FFFFFF;
+  $light-primary-variant-container: #F0F3F6;
   $light-primary-container: #CBE5FF;
   $light-on-primary-container: #001D32;
+
 
   $light-secondary: #51606F;
   $light-on-secondary: #ffffff;
@@ -149,10 +151,12 @@
     --sidelbar-title-color: #{$light-on-surface-variant};
     --container-sidebar-color: #{$light-background};
     --sidebar-item-color: #{$light-on-surface-variant};
-    --line-color: #{$neutral-60};
+    --line-right-color: #{$light-outline};
     --line-top-color: #{$light-background};
-    --like-button-color: #{$error-80};
-    --cards-background-color: #{$neutral-variant-40};
+    --like-button-color: #{$light-error};
+    --cards-background-color: #{$secondary-40};
+    --container-game-color: #{$light-primary-variant-container};
+    --container-game-footer: #{$light-background}
   }
 
   @media (prefers-color-scheme: dark) {
@@ -164,10 +168,12 @@
       --sidelbar-title-color: #{$dark-secondary};
       --container-sidebar-color: #{$neutral-variant-20};
       --sidebar-item-color: #{$dark-secondary};
-      --line-color: #{$neutral-variant-30};
+      --line-right-color: #{$neutral-variant-30};
       --line-top-color: #{$neutral-variant-10};
-      --like-button-color: #{$error-80};
+      --like-button-color: #{$dark-error};
       --cards-background-color: #{$neutral-variant-40};
+      --container-game-color: #{$neutral-10};
+      --container-game-footer: #{$neutral-variant-20}
     }
   }
 

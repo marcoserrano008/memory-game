@@ -159,6 +159,15 @@ function updateTime() {
         2,
         "0"
     )}:${String(secs).padStart(2, "0")}`;
+
+    //time in 1/100 secs
+    // const secs = Math.floor((seconds % 6000) / 100);
+    //   const centSecs = seconds % 100;
+
+    //   document.getElementById("time").textContent = `${String(secs).padStart(
+    //     2,
+    //     "0"
+    //   )}:${String(centSecs).padStart(2, "0")}`;
 }
 
 function shuffle(array) {
@@ -189,6 +198,14 @@ function sidebarEventListener() {
         container.classList.toggle("sidebar-hidden");
     })
 }
+function updateTitle(newTitle) {
+    const currentTitleElement = document.getElementById("current-title");
+    currentTitleElement.innerText = newTitle;
+    document.querySelectorAll(".link__title--current").forEach((element) => {
+        element.classList.remove("link__title--current");
+    });
+    currentTitleElement.classList.add("link__title--current");
+}
 
 function resetGame() {
     clearInterval(intervalId);
@@ -216,3 +233,12 @@ const resetScoreElement = document.querySelector('.github');
 resetScoreElement.addEventListener('click', () => {
     localStorage.removeItem("min-time");
 })
+
+document.querySelectorAll('.bvg-sidebar__item').forEach(item => {
+
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        const newTitle = item.getAttribute('title');
+        updateTitle(newTitle);
+    });
+});

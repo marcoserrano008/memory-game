@@ -18,7 +18,6 @@
   grid-area: header;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 .sidebar {
@@ -26,11 +25,14 @@
   overflow-y: auto;
   background-color: var(--container-sidebar-color);
   position: relative;
+  border-right: 1px solid var(--line-right-color);
 }
 
 .main {
   grid-area: main;
   background-color: var(--line-top-color);
+  overflow-y: auto;
+  height: 100%;
 }
 
 .toggle-sidebar {
@@ -184,12 +186,13 @@
   }
 
   .sidebar.active {
+    box-sizing: border-box;
     display: block;
     position: fixed;
     left: 0;
     top: 70px;
     width: 250px;
-    height: calc(100% - 60px);
+    height: calc(100% - 70px);
     z-index: 1001;
     background-color: var(--container-sidebar-color);
     padding: 1rem;
